@@ -44,7 +44,7 @@ public class IntArrayWorker
     }
     return total;
   }
-  
+
   /**
    * Method to fill with an increasing count
    */
@@ -61,7 +61,52 @@ public class IntArrayWorker
       }
     }
   }
-  
+
+  public int getCount(int number)
+  {
+    int count = 0;
+    for(int i = 0; i < matrix.length; i++)
+    {
+      for(int j =0; j < matrix[0].length; j++)
+      {
+        if(matrix[i][j] == number)
+        {
+          count++;
+        }
+      }
+    }
+    return count;
+  }
+
+  public int getLargest()
+  {
+    int largest = matrix[0][0];
+    for(int i = 0; i < matrix.length; i++)
+    {
+      for(int j =0; j < matrix[0].length; j++)
+      {
+        if(matrix[i][j] > largest)
+        {
+          largest = matrix[i][j];
+        }
+      }
+    }
+    return largest;
+  }
+
+  public int getColTotal(int column)
+  {
+    int sum = 0;
+    for(int i = 0; i < matrix.length; i++)
+    {
+      for(int j =0; j < matrix[0].length; j++)
+      {
+        sum = sum + matrix[i][j];
+      }
+    }
+    return sum;
+  }
+
   /**
    * print the values in the array in rows and columns
    */
