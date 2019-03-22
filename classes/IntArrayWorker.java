@@ -96,15 +96,12 @@ public class IntArrayWorker
 
   public int getColTotal(int column)
   {
-    int sum = 0;
-    for(int i = 0; i < matrix.length; i++)
+    int total = 0;
+    for(int j =0; j < matrix.length; j++)
     {
-      for(int j =0; j < matrix[0].length; j++)
-      {
-        sum = sum + matrix[i][j];
-      }
+        total = total + matrix[j][column];
     }
-    return sum;
+    return total;
   }
 
   /**
